@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - CodeAlpha_EcommerceStore</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>🛍️ CodeAlpha_EcommerceStore</h1>
+            </div>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="#categories">Categories</a>
+                <a href="#about">About</a>
+            </nav>
+            <div class="header-actions">
+                <div class="user-actions">
+                    <a href="login.html" id="login-btn">Login</a>
+                    <a href="register.html" id="register-btn">Register</a>
+                    <div id="user-menu" class="user-menu hidden">
+                        <span id="user-name"></span>
+                        <div class="dropdown">
+                            <a href="profile.html">Profile</a>
+                            <a href="orders.html">My Orders</a>
+                            <button onclick="logout()">Logout</button>
+                        </div>
+                    </div>
+                    <a href="cart.html" class="cart-icon">
+                        🛒 <span id="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="cart-page" style="padding: 100px 0 60px;">
+        <div class="container">
+            <h1>Shopping Cart</h1>
+            <div id="cart-items">
+                <!-- Cart items will be loaded by JavaScript -->
+            </div>
+            <div class="cart-summary">
+                <div class="summary-card">
+                    <h3>Order Summary</h3>
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping:</span>
+                        <span id="shipping">$0.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total:</span>
+                        <span id="total">$0.00</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="proceedToCheckout()" id="checkout-btn">
+                        Proceed to Checkout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025 CodeAlpha_EcommerceStore | All Rights Reserved</p>
+            <p>CEO & Co-Founder: Filimon Gebretsadik (KingFillari)</p>
+            <div class="social-icons">
+                <a href="https://t.me/CodeAlpha_EcommerceStore" target="_blank">
+                    <img src="images/icons/telegram.png" alt="Telegram" class="icon" />
+                </a>
+                <a href="https://www.linkedin.com/in/fillimon-gebre" target="_blank">
+                    <img src="images/icons/linkedin.png" alt="LinkedIn" class="icon" />
+                </a>
+            </div>
+            <p>📧 gebrefillimon@gmail.com | 📍 Addis Ababa, Ethiopia</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CodeAlpha_EcommerceStore</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>🛍️ CodeAlpha_EcommerceStore</h1>
+            </div>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="#categories">Categories</a>
+                <a href="#about">About</a>
+            </nav>
+            <div class="header-actions">
+                <div class="user-actions">
+                    <a href="login.html" id="login-btn" class="active">Login</a>
+                    <a href="register.html" id="register-btn">Register</a>
+                    <div id="user-menu" class="user-menu hidden">
+                        <span id="user-name"></span>
+                        <div class="dropdown">
+                            <a href="profile.html">Profile</a>
+                            <a href="orders.html">My Orders</a>
+                            <button onclick="logout()">Logout</button>
+                        </div>
+                    </div>
+                    <a href="cart.html" class="cart-icon">
+                        🛒 <span id="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="auth-page" style="padding: 100px 0 60px;">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-card">
+                    <h2>Login to Your Account</h2>
+                    <form id="login-form">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            Login
+                        </button>
+                    </form>
+                    <div class="auth-links">
+                        <p>Don't have an account? <a href="register.html">Register here</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025 CodeAlpha_EcommerceStore | All Rights Reserved</p>
+            <p>CEO & Co-Founder: Filimon Gebretsadik (KingFillari)</p>
+            <div class="social-icons">
+                <a href="https://t.me/CodeAlpha_EcommerceStore" target="_blank">
+                    <img src="images/icons/telegram.png" alt="Telegram" class="icon" />
+                </a>
+                <a href="https://www.linkedin.com/in/fillimon-gebre" target="_blank">
+                    <img src="images/icons/linkedin.png" alt="LinkedIn" class="icon" />
+                </a>
+            </div>
+            <p>📧 gebrefillimon@gmail.com | 📍 Addis Ababa, Ethiopia</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/auth.js"></script>
+</body>
+</html>

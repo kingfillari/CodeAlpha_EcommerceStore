@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeAlpha_EcommerceStore - Modern E-commerce</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>🛍️ CodeAlpha_EcommerceStore</h1>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="active">Home</a>
+                <a href="products.html">Products</a>
+                <a href="#categories">Categories</a>
+                <a href="#about">About</a>
+            </nav>
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search products...">
+                    <button onclick="searchProducts()">🔍</button>
+                </div>
+                <div class="user-actions">
+                    <a href="login.html" id="login-btn">Login</a>
+                    <a href="register.html" id="register-btn">Register</a>
+                    <div id="user-menu" class="user-menu hidden">
+                        <span id="user-name"></span>
+                        <div class="dropdown">
+                            <a href="profile.html">Profile</a>
+                            <a href="orders.html">My Orders</a>
+                            <button onclick="logout()">Logout</button>
+                        </div>
+                    </div>
+                    <a href="cart.html" class="cart-icon">
+                        🛒 <span id="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Welcome to CodeAlpha_EcommerceStore</h2>
+                <p>Discover amazing products at unbeatable prices. Quality guaranteed with fast delivery.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="window.location.href='products.html'">Shop Now</button>
+                    <button class="btn btn-secondary">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-card">
+                    <div class="card-icon">🚀</div>
+                    <h4>Fast Delivery</h4>
+                    <p>Free shipping on orders over $50</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2>Shop by Category</h2>
+            <div class="categories-grid" id="categories-grid">
+                <!-- Categories will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="products-grid" id="featured-products">
+                <!-- Featured products will be loaded by JavaScript -->
+            </div>
+            <div class="view-all">
+                <button class="btn btn-outline" onclick="window.location.href='products.html'">View All Products</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025 CodeAlpha_EcommerceStore | All Rights Reserved</p>
+            <p>CEO & Co-Founder: Filimon Gebretsadik (KingFillari)</p>
+            <div class="social-icons">
+                <a href="https://t.me/CodeAlpha_EcommerceStore" target="_blank">
+                    <img src="images/icons/telegram.png" alt="Telegram" class="icon" />
+                </a>
+                <a href="https://www.linkedin.com/in/fillimon-gebre" target="_blank">
+                    <img src="images/icons/linkedin.png" alt="LinkedIn" class="icon" />
+                </a>
+            </div>
+            <p>📧 gebrefillimon@gmail.com | 📍 Addis Ababa, Ethiopia</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/auth.js"></script>
+</body>
+</html>
