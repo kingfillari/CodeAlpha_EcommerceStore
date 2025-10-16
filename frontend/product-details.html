@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - CodeAlpha_EcommerceStore</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>🛍️ CodeAlpha_EcommerceStore</h1>
+            </div>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="#categories">Categories</a>
+                <a href="#about">About</a>
+            </nav>
+            <div class="header-actions">
+                <div class="user-actions">
+                    <a href="login.html" id="login-btn">Login</a>
+                    <a href="register.html" id="register-btn">Register</a>
+                    <div id="user-menu" class="user-menu hidden">
+                        <span id="user-name"></span>
+                        <div class="dropdown">
+                            <a href="profile.html">Profile</a>
+                            <a href="orders.html">My Orders</a>
+                            <button onclick="logout()">Logout</button>
+                        </div>
+                    </div>
+                    <a href="cart.html" class="cart-icon">
+                        🛒 <span id="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="product-details" style="padding: 100px 0 60px;">
+        <div class="container">
+            <div class="product-detail-container">
+                <div class="product-image-large">
+                    <div id="product-image" style="width: 100%; height: 400px; background: #f8fafc; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 6rem;">
+                        📱
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h1 id="product-name">Product Name</h1>
+                    <div class="product-category" id="product-category">Category</div>
+                    <div class="product-price" id="product-price">$0.00</div>
+                    <div class="product-stock" id="product-stock">In stock: 0</div>
+                    <div class="product-description" id="product-description">
+                        Product description will appear here.
+                    </div>
+                    <div class="quantity-selector">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" min="1" value="1" max="10">
+                    </div>
+                    <button class="btn btn-primary" id="add-to-cart-btn" onclick="addToCartFromDetails()">
+                        Add to Cart
+                    </button>
+                    <button class="btn btn-outline" onclick="window.location.href='products.html'">
+                        Continue Shopping
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025 CodeAlpha_EcommerceStore | All Rights Reserved</p>
+            <p>CEO & Co-Founder: Filimon Gebretsadik (KingFillari)</p>
+            <div class="social-icons">
+                <a href="https://t.me/CodeAlpha_EcommerceStore" target="_blank">
+                    <img src="images/icons/telegram.png" alt="Telegram" class="icon" />
+                </a>
+                <a href="https://www.linkedin.com/in/fillimon-gebre" target="_blank">
+                    <img src="images/icons/linkedin.png" alt="LinkedIn" class="icon" />
+                </a>
+            </div>
+            <p>📧 gebrefillimon@gmail.com | 📍 Addis Ababa, Ethiopia</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/product-details.js"></script>
+</body>
+</html>
