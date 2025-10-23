@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - CodeAlpha_EcommerceStore</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+   <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>🛍️ CodeAlpha_EcommerceStore</h1>
+            </div>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="categories.html">Categories</a>
+                <a href="about.html" class="active">About</a>
+            </nav>
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search products...">
+                    <button onclick="searchProducts()">🔍</button>
+                </div>
+                <div class="user-actions">
+                    <a href="login.html" id="login-btn">Login</a>
+                    <a href="register.html" id="register-btn">Register</a>
+                    <div id="user-menu" class="user-menu hidden">
+                        <span id="user-name"></span>
+                        <div class="dropdown">
+                            <a href="profile.html">Profile</a>
+                            <a href="orders.html">My Orders</a>
+                            <button onclick="logout()">Logout</button>
+                        </div>
+                    </div>
+                    <a href="cart.html" class="cart-icon">
+                        🛒 <span id="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section" style="padding: 80px 0; background: var(--surface);">
+        <div class="container text-center">
+            <h2 style="font-size: 2.8rem; margin-bottom: 1rem; color: var(--text);">About CodeAlpha_EcommerceStore</h2>
+            <p style="max-width: 800px; margin: 0 auto 2rem; color: var(--text-light); font-size: 1.1rem; line-height: 1.8;">
+                CodeAlpha_EcommerceStore is a modern, full-featured global eCommerce platform designed to provide a seamless online shopping experience.  
+                Our mission is to deliver high-quality products, fast delivery, and secure transactions for customers worldwide.
+            </p>
+
+            <h3 style="font-size: 2rem; margin-bottom: 1rem; color: var(--text);">Our CEO & Co-Founder</h3>
+            <div class="ceo-info" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                <img src="images/CEO.jpg" alt="CEO Fillimon (KingFillari)" style="width:150px; height:150px; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary);">
+                <p style="font-size: 1rem; color: var(--text-light); line-height: 1.6;">
+                    👤 <strong>Fillimon Gebretsadik (KingFillari)</strong><br>
+                    👔 CEO & Co-Founder — Addis Ababa, Ethiopia<br>
+                    ✉️ Email: <a href="mailto:gebrefillimon@gmail.com" style="color: var(--primary); text-decoration: underline;">gebrefillimon@gmail.com</a><br>
+                    🔗 LinkedIn: <a href="https://www.linkedin.com/in/fillimon-gebre" target="_blank" style="color: var(--primary); text-decoration: underline;">View Profile</a><br>
+                    💬 Telegram: <a href="https://t.me/CodeAlpha_EcommerceStore" target="_blank" style="color: var(--primary); text-decoration: underline;">Join Chat</a>
+                </p>
+            </div>
+
+            <h3 style="font-size: 2rem; margin: 2rem 0 1rem; color: var(--text);">Our Vision</h3>
+            <p style="max-width: 800px; margin: 0 auto; color: var(--text-light); font-size: 1.1rem; line-height: 1.8;">
+                We aim to empower online shopping globally with real-time stock updates, multilingual support, and an easy-to-use interface.  
+                Our platform supports English, Amharic, French, and Arabic, with AI-powered recommendations planned for future updates.
+            </p>
+
+            <!-- Social Icons -->
+            <div class="social-icons" style="margin-top: 2rem;">
+                <a href="https://www.linkedin.com/in/fillimon-gebre" class="linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://t.me/CodeAlpha_EcommerceStore" class="telegram" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                <a href="mailto:gebrefillimon@gmail.com" class="email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025 CodeAlpha_EcommerceStore | All Rights Reserved</p>
+            <p>CEO & Co-Founder: Fillimon Gebretsadik (KingFillari)</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/fillimon-gebre" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://t.me/CodeAlpha_EcommerceStore" target="_blank" class="telegram"><i class="fab fa-telegram-plane"></i></a>
+                <a href="mailto:gebrefillimon@gmail.com" class="email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>📧 gebrefillimon@gmail.com | 📍 Addis Ababa, Ethiopia</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/auth.js"></script>
+</body>
+</html>
