@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CodeAlpha EcommerceStore</title>
+
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/responsive.css" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    /* Page-specific (keeps main CSS untouched) */
+    :root { --brand-1:#2563eb; --brand-2:#1d4ed8; --muted:#64748b; }
+    body { -webkit-font-smoothing:antialiased; }
+
+    /* Header override for hamburger */
+    .site-header { background: #fff; border-bottom: 1px solid #e6eefc; position:sticky; top:0; z-index:1200; }
+    .site-header .container { display:flex;align-items:center;justify-content:space-between;padding:14px 20px; }
+    .brand { font-weight:700; color:var(--brand-1); font-size:1.15rem; letter-spacing:0.2px; text-decoration:none; }
+    .nav-links { display:flex; gap:18px; align-items:center; }
+    .nav-links a { text-decoration:none; color:#0f172a; font-weight:500; }
+    .nav-toggle { display:none; background:transparent; border:none; font-size:1.2rem; }
+
+    /* Mobile nav */
+    @media (max-width: 880px) {
+      .nav-links { position:fixed; right:0; top:0; height:100vh; width:260px; transform:translateX(100%); background:#fff; flex-direction:column; padding:70px 20px; gap:18px; box-shadow:-10px 0 30px rgba(0,0,0,0.08); transition:transform .28s ease; }
+      .nav-links.open { transform:translateX(0); }
+      .nav-toggle { display:block; color:var(--brand-1); }
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg,var(--brand-1),var(--brand-2));
+      color:#fff; padding:110px 20px; text-align:center; position:relative; overflow:hidden;
+    }
+    .hero h1 { font-size:2.6rem; margin-bottom:12px; font-weight:700; }
+    .hero p { max-width:880px; margin:0 auto; opacity:0.95; color:rgba(255,255,255,0.95); }
+
+    /* Layout */
+    .about-grid { display:grid; grid-template-columns: 1fr 480px; gap:40px; padding:70px 20px; align-items:center; max-width:1200px; margin:0 auto; }
+    @media (max-width:980px){ .about-grid { grid-template-columns: 1fr; padding:40px 18px; } }
+
+    .about-text h2 { color: #0f172a; margin-bottom:10px; font-size:1.6rem; }
+    .about-text p { color:var(--muted); line-height:1.7; margin-bottom:18px; }
+
+    .about-image img { width:100%; border-radius:12px; box-shadow:0 10px 30px rgba(16,24,40,0.06); }
+
+    .values { background:#f8fbff; padding:60px 20px; }
+    .values .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; max-width:1100px; margin:0 auto; }
+    .value-card { background:#fff; padding:24px; border-radius:12px; box-shadow:0 6px 18px rgba(16,24,40,0.04); text-align:left; }
+    .value-card i { color:var(--brand-1); font-size:1.4rem; margin-bottom:10px; display:inline-block; }
+
+    .cta { background:linear-gradient(135deg,var(--brand-2),var(--brand-1)); color:#fff; text-align:center; padding:64px 20px; }
+    .cta a { background:#fff; color:var(--brand-2); padding:12px 26px; border-radius:28px; display:inline-block; font-weight:600; text-decoration:none; }
+
+    footer.footer { padding:28px 20px; background:#0b1220; color:#cfe3ff; text-align:center; }
+    footer .social-icons a { color:#cfe3ff; margin:0 8px; text-decoration:none; }
+
+    /* Fade-in animation */
+    .fade-in { opacity:0; transform:translateY(22px); transition:opacity .8s ease, transform .8s ease; }
+    .fade-in.visible { opacity:1; transform:translateY(0); }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">CodeAlpha EcommerceStore</a>
+
+      <nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="categories.html">Categories</a>
+          <a href="products.html">Products</a>
+          <a href="about.html" class="active">About</a>
+          <a href="login.html">Login</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero fade-in" id="hero">
+    <div class="container">
+      <h1>About CodeAlpha EcommerceStore</h1>
+      <p>
+        Building a world-class, blue-chip eCommerce platform that connects people and products — aiming to empower
+        billions with accessible, secure, and delightful shopping experiences across the globe.
+      </p>
+    </div>
+  </section>
+
+  <!-- About grid -->
+  <section class="about-grid fade-in" id="aboutGrid">
+    <div class="about-text">
+      <h2>Who we are</h2>
+      <p>
+        CodeAlpha EcommerceStore is engineered to provide best-in-class shopping experiences: fast search, trusted sellers,
+        secure payments, and reliable delivery. Founded and led by Filimon Gebretsadik (KingFillari), our platform focuses on
+        scalability and inclusion — serving local communities and global markets.
+      </p>
+
+      <h2>Vision</h2>
+      <p>To enable a billion people to access global commerce — effortlessly and ethically.</p>
+
+      <h2>Mission</h2>
+      <p>Deliver innovative, transparent, and human-centered commerce solutions that make life easier for shoppers and sellers.</p>
+    </div>
+
+    <div class="about-image">
+      <img src="images/about-store.jpg" alt="About CodeAlpha EcommerceStore" />
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="values fade-in" id="values">
+    <div class="container">
+      <h2 style="text-align:center;color:var(--brand-1);margin-bottom:28px;">Core Principles</h2>
+      <div class="grid">
+        <div class="value-card">
+          <i class="fa-solid fa-user-shield"></i>
+          <h4 style="margin:6px 0 8px;">Trust & Security</h4>
+          <p style="color:var(--muted);margin:0;">Every transaction protected and supported by responsive service.</p>
+        </div>
+        <div class="value-card">
+          <i class="fa-solid fa-rocket"></i>
+          <h4 style="margin:6px 0 8px;">Innovation</h4>
+          <p style="color:var(--muted);margin:0;">Modern tooling (AI, data, logistics) to help merchants scale globally.</p>
+        </div>
+        <div class="value-card">
+          <i class="fa-solid fa-globe"></i>
+          <h4 style="margin:6px 0 8px;">Global Reach</h4>
+          <p style="color:var(--muted);margin:0;">Accessible to diverse markets with region-aware features and languages.</p>
+        </div>
+        <div class="value-card">
+          <i class="fa-solid fa-handshake"></i>
+          <h4 style="margin:6px 0 8px;">Integrity</h4>
+          <p style="color:var(--muted);margin:0;">Transparent fees, clear policies, and consistent seller quality control.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta fade-in" id="cta">
+    <div class="container">
+      <h2>Join the revolution in commerce</h2>
+      <p style="max-width:820px;margin:14px auto 20px;color:rgba(255,255,255,0.92);">
+        Shop smarter, sell globally, and build commerce that serves communities at scale.
+      </p>
+      <a href="categories.html">Explore Categories</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2025 CodeAlpha EcommerceStore | All Rights Reserved</p>
+      <p>Founder & CEO: Filimon Gebretsadik (KingFillari)</p>
+      <div class="social-icons" style="margin-top:10px;">
+        <a href="https://www.linkedin.com/in/fillimon-gebre" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://t.me/CodeAlpha_EcommerceStore" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-telegram-plane"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+    // Close mobile nav on link click
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+    // IntersectionObserver fade-in
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('visible');
+      });
+    }, { threshold: 0.18 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

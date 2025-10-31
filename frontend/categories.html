@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CodeAlpha EcommerceStore - Categories</title>
+
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/responsive.css" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    :root { --brand-1:#2563eb; --brand-2:#1d4ed8; --muted:#64748b; }
+    .site-header { background:#fff; border-bottom:1px solid #e6eefc; position:sticky; top:0; z-index:1200; }
+    .site-header .container { display:flex;align-items:center;justify-content:space-between;padding:14px 20px; }
+    .brand { font-weight:700; color:var(--brand-1); font-size:1.15rem; text-decoration:none; }
+
+    .nav-links { display:flex; gap:18px; align-items:center; }
+    .nav-toggle { display:none; background:transparent; border:none; font-size:1.2rem; }
+    @media (max-width:880px) {
+      .nav-links { position:fixed; right:0; top:0; height:100vh; width:260px; transform:translateX(100%); background:#fff; flex-direction:column; padding:70px 20px; gap:18px; box-shadow:-10px 0 30px rgba(0,0,0,0.08); transition:transform .28s ease; }
+      .nav-links.open { transform:translateX(0); }
+      .nav-toggle { display:block; color:var(--brand-1); }
+    }
+
+    .hero {
+      background: linear-gradient(135deg,var(--brand-1),var(--brand-2));
+      color:#fff; text-align:center; padding:110px 20px;
+    }
+    .hero h1 { font-size:2.4rem; margin-bottom:8px; }
+    .hero p { opacity:0.95; max-width:900px; margin:0 auto; }
+
+    .grid-wrap { max-width:1200px; margin:0 auto; padding:70px 20px; }
+    .categories-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:26px; }
+    .category-card { background:#fff; border-radius:12px; padding:22px; text-align:center; box-shadow:0 6px 20px rgba(2,6,23,0.06); transition:transform .26s ease, box-shadow .26s ease; }
+    .category-card:hover { transform:translateY(-6px); box-shadow:0 14px 40px rgba(2,6,23,0.09); }
+    .category-card img { width:100%; height:140px; object-fit:cover; border-radius:8px; margin-bottom:12px; }
+    .category-card h3 { color:#0f172a; margin-bottom:6px; }
+    .category-card p { color:var(--muted); font-size:0.95rem; }
+
+    .explore { text-align:center; padding:36px 20px; }
+    .explore a { background:var(--brand-1); color:#fff; padding:12px 28px; border-radius:28px; text-decoration:none; font-weight:600; }
+    .fade-in { opacity:0; transform:translateY(22px); transition:opacity .8s ease, transform .8s ease; }
+    .fade-in.visible { opacity:1; transform:translateY(0); }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">CodeAlpha EcommerceStore</a>
+
+      <nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="categories.html" class="active">Categories</a>
+          <a href="about.html">About</a>
+          <a href="products.html">Products</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero fade-in">
+    <div class="container">
+      <h1>Explore Categories</h1>
+      <p>Browse popular categories curated for millions of shoppers — discover trending items and top picks.</p>
+    </div>
+  </section>
+
+  <!-- Categories grid -->
+  <main class="grid-wrap">
+    <section class="categories-grid" id="categoriesGrid">
+      <!-- Example static cards (you can replace with dynamic generation using products.js) -->
+      <article class="category-card fade-in">
+        <img src="images/categories/fashion.jpg" alt="Fashion & Apparel" />
+        <h3>Fashion & Apparel</h3>
+        <p>Clothing, shoes, and accessories — latest trends and essentials.</p>
+      </article>
+
+      <article class="category-card fade-in">
+        <img src="images/categories/electronics.jpg" alt="Electronics" />
+        <h3>Electronics</h3>
+        <p>Smartphones, laptops, audio and more — tech for every lifestyle.</p>
+      </article>
+
+      <article class="category-card fade-in">
+        <img src="images/categories/home.jpg" alt="Home & Living" />
+        <h3>Home & Living</h3>
+        <p>Furniture, décor, and tools to upgrade your living space.</p>
+      </article>
+
+      <article class="category-card fade-in">
+        <img src="images/categories/beauty.jpg" alt="Beauty & Wellness" />
+        <h3>Beauty & Wellness</h3>
+        <p>Skincare, cosmetics, and wellness essentials.</p>
+      </article>
+
+      <article class="category-card fade-in">
+        <img src="images/categories/sports.jpg" alt="Sports & Fitness" />
+        <h3>Sports & Fitness</h3>
+        <p>Active gear, nutrition, and training tools to reach your goals.</p>
+      </article>
+
+      <article class="category-card fade-in">
+        <img src="images/categories/books.jpg" alt="Books" />
+        <h3>Books</h3>
+        <p>Fiction, non-fiction, learning — stories and knowledge for everyone.</p>
+      </article>
+    </section>
+
+    <div class="explore fade-in">
+      <a href="products.html">Start Shopping</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content" style="text-align:center;padding:26px 20px;background:#061226;color:#dbeeff;">
+      <p>© 2025 CodeAlpha EcommerceStore | All Rights Reserved</p>
+      <p>Founder & CEO: Filimon Gebretsadik (KingFillari)</p>
+      <div style="margin-top:10px;">
+        <a href="https://www.linkedin.com/in/fillimon-gebre" target="_blank" rel="noopener noreferrer" style="color:#dbeeff;margin:0 8px;"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://t.me/CodeAlpha_EcommerceStore" target="_blank" rel="noopener noreferrer" style="color:#dbeeff;margin:0 8px;"><i class="fa-brands fa-telegram-plane"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+    // Fade-in IntersectionObserver
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.18 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
